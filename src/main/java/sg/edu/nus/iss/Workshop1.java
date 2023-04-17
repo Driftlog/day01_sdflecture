@@ -1,4 +1,4 @@
-package sg.edu.nus.iss.sg.edu.nus.iss;
+package sg.edu.nus.iss;
 import java.util.ArrayList;
 import java.io.Console;
 import java.util.List;
@@ -32,6 +32,8 @@ public class Workshop1 {
                 for (String fruits : subCart) {
                     if (!cart.contains(fruits)) {
                         cart.add(fruits);
+                    } else {
+                        System.out.println("You have " + fruits + " in your cart");
                     }
                 }
             }
@@ -40,6 +42,9 @@ public class Workshop1 {
                 String sub = command.substring(7, command.length()-1);
                 Integer index = Integer.parseInt(sub);
 
+                if (index > cart.size()) {
+                    System.out.println("Incorrect item index");
+                }
                 System.out.println(cart.get(index) + " removed from the cart");
                 cart.remove(index);
             }

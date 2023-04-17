@@ -9,9 +9,12 @@ import java.text.Format;
  */
 public class App {
     public static void main(String[] args) {
+        Console con = System.console();
+
+        /** 
         System.out.println("Hello World!");
 
-        Console con = System.console();
+    
         String name = con.readLine("What's your name ");
         if (name.isEmpty()) {
             System.out.println("You have not told me your name");
@@ -71,9 +74,13 @@ public class App {
             System.out.println("you are an adult");
         }
         
+        
+        */
+
         //Slide 21
+        
         Integer i = 0;
-        input = con.readLine("Type a phrase: ");
+        String input = con.readLine("Type a phrase: ");
 
         while (i < input.length()) {
             System.out.println(input.substring(0, i));
