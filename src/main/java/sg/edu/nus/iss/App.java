@@ -37,5 +37,47 @@ public class App {
         } else {
             System.out.println("dang, you boring");
         }
+
+        //Slide 18
+        //Switch statement
+        switch (input) {
+            case "swim":
+                System.out.println("The nearest swimming pool is Clementi");
+                break;
+            case "jog":
+                System.out.println("The nearest park is West Coast Park"); 
+                break;
+            case "cycle":
+                System.out.println("You can cycle along the PCN");
+                break;
+            default:
+                System.out.println("dang, you boring");
+                break;
+        }
+
+        Integer myAge = 0;
+        String inputAge = con.readLine("whats your age?");
+        myAge = Integer.parseInt(inputAge);
+
+        if (myAge >- 0 && myAge <= 3) {
+            System.out.println("you are a baby");
+        } else if (myAge > 2 && myAge <= 4) {
+            System.out.println("you are a toddler");
+        } else if (myAge >4 && myAge < 12) {
+            System.out.println("you are a child");
+        } else if (myAge > 12 && myAge < 19) {
+            System.out.println("you are a teen");
+        } else {
+            System.out.println("you are an adult");
+        }
+        
+        //Slide 21
+        Integer i = 0;
+        input = con.readLine("Type a phrase: ");
+
+        while (i < input.length()) {
+            System.out.println(input.substring(0, i));
+            i++;
+        }
     }
 }
